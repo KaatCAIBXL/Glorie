@@ -1,7 +1,9 @@
- @font-face {
+ /* @font-face {
       font-family: 'Nicholas';
       src: url('Nicholas.ttf') format('truetype');
-    }
+    } */
+
+
 
     :root {
       --bg: #FFF4EA;
@@ -16,6 +18,7 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      font-family: Georgia, 'Times New Roman', Times, serif;
     }
 
     body {
@@ -370,7 +373,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 28px;
-      text-align: left;
+      text-align: center;
       margin-top: 18px;
     }
 
@@ -406,8 +409,8 @@
     }
 
     footer {
-      min-height: 100vh;
-      height: 100vh;
+      /* min-height: 100vh; */
+      height: 50px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -559,6 +562,7 @@
 
     html {
       scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
     }
 
     .hero,
