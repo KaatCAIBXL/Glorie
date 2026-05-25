@@ -5,9 +5,7 @@
   <title>Uitnodiging G&A</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <style>
-    @import url('style.css');
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -61,35 +59,16 @@
         construite dans la simplicité, l'écoute et la complicité, jusqu'à ce
         que l'amour, voulu et guidé par Dieu, se révèle au coeur de notre amitié.
       </div>
+
+      <div class="love-photos">
+        <div class="photo-box">PHOTO 1</div>
+        <div class="photo-box">PHOTO 2</div>
+      </div>
     </section>
 
   </div>
 
-  <script>
-    // Countdown tot 8 augustus 2026
-    const targetDate = new Date("2026-08-08T00:00:00");
-
-    function updateCountdown() {
-      const now = new Date();
-      const diff = targetDate - now;
-
-      if (diff <= 0) return;
-
-      const seconds = Math.floor(diff / 1000);
-      const days = Math.floor(seconds / (60 * 60 * 24));
-      const hours = Math.floor((seconds % (60 * 60 * 24)) / (60 * 60));
-      const minutes = Math.floor((seconds % (60 * 60)) / 60);
-      const secs = seconds % 60;
-
-      document.getElementById("days").textContent = days;
-      document.getElementById("hours").textContent = hours;
-      document.getElementById("minutes").textContent = minutes;
-      document.getElementById("seconds").textContent = secs;
-    }
-
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-  </script>
+  <script src="script.js"></script>
 
 </body>
 </html>
