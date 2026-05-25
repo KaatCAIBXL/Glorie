@@ -1,10 +1,8 @@
-# Eenmalig: inloggen op GitHub (volg de instructies in de terminal)
-gh auth login
+# Gebruik het volledige pad naar gh (werkt ook als gh niet in PATH staat)
+$gh = "C:\Program Files\GitHub CLI\gh.exe"
 
-# Repository aanmaken en code uploaden
-# Pas de naam aan indien gewenst (bijv. glorie-mariage)
-gh repo create glorie-mariage --private --source=. --remote=origin --push --description "Invitation mariage Gloire et Annabelle"
+& $gh auth login
+& $gh repo create glorie-mariage --private --source=. --remote=origin --push --description "Invitation mariage Gloire et Annabelle"
 
-Write-Host ""
-Write-Host "Klaar! Open je repo op: https://github.com/KaatCAIBXL/glorie-mariage"
-Write-Host "Activeer GitHub Pages: Settings -> Pages -> branch main, folder / (root)"
+Write-Host "Klaar: https://github.com/KaatCAIBXL/glorie-mariage"
+Write-Host "Site: https://kaatcaibxl.github.io/glorie-mariage/"

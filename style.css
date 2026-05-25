@@ -1,0 +1,254 @@
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+font-family: "Cormorant Garamond", "Times New Roman", serif;
+background: #F2F1EC;
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+}
+
+.wrapper {
+width: 100%;
+max-width: 700px;
+padding: 16px;
+}
+
+.card {
+position: relative;
+width: 100%;
+border-radius: 12px;
+overflow: hidden;
+cursor: pointer;
+box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+background: #F2F1EC;
+}
+
+.card img {
+width: 100%;
+display: block;
+}
+
+.hint {
+position: absolute;
+bottom: 10px;
+left: 50%;
+transform: translateX(-50%);
+background: rgba(0,0,0,0.55);
+color: #fff;
+padding: 6px 12px;
+border-radius: 999px;
+font-size: 0.85rem;
+letter-spacing: 0.05em;
+text-transform: uppercase;
+}
+
+/* Onderste HTML-zone van de uitnodiging */
+.invite-html {
+padding: 24px 20px 28px;
+text-align: center;
+background: #F2F1EC;
+}
+
+.invite-heading {
+font-family: "Cormorant Garamond", "Times New Roman", serif;
+font-size: 1.1rem;
+letter-spacing: 0.18em;
+text-transform: uppercase;
+color: #7A1F2A; /* bordeaux */
+margin-bottom: 6px;
+}
+
+.invite-yes {
+font-size: 1.4rem;
+font-style: italic;
+color: #7A1F2A;
+margin-bottom: 10px;
+}
+
+.invite-sub {
+font-size: 0.9rem;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+color: #7A1F2A;
+margin-bottom: 18px;
+}
+
+.countdown {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 10px;
+margin-bottom: 18px;
+}
+
+.count-box {
+min-width: 70px;
+padding: 8px 10px;
+border: 1px solid #7A1F2A;
+border-radius: 6px;
+}
+
+.count-number {
+font-size: 1.3rem;
+color: #7A1F2A;
+margin-bottom: 2px;
+}
+
+.count-label {
+font-size: 0.7rem;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+color: #7A1F2A;
+}
+
+.bible-text {
+font-size: 0.8rem;
+line-height: 1.5;
+color: #444;
+max-width: 480px;
+margin: 0 auto;
+font-style: italic;
+}
+
+.bible-ref {
+margin-top: 4px;
+font-size: 0.8rem;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+color: #7A1F2A;
+}
+
+/* Verberg HTML-deel zolang de envelop nog dicht is */
+.invite-html.hidden {
+display: none;
+}
+
+@media (max-width: 480px) {
+.invite-html {
+    padding: 18px 14px 22px;
+}
+}
+.card img {
+width: 100%;
+display: block;
+transition: transform 0.3s ease;
+}
+
+/* Maak de open brief kleiner */
+.card.open img {
+transform: scale(0.88); /* pas aan naar smaak: 0.80, 0.85, 0.90... */
+transform-origin: top center;
+}
+/* Love story section */
+.love-story {
+  background: #F2F1EC;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.love-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  color: #7A1F2A;
+  margin-bottom: 20px;
+  letter-spacing: 0.05em;
+}
+
+.love-text {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #444;
+  font-style: italic;
+}
+
+.love-photos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.photo-box {
+  width: 260px;
+  height: 340px;
+  background: #e8e6df;
+  border: 2px dashed #7A1F2A;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.2rem;
+  color: #7A1F2A;
+  letter-spacing: 0.05em;
+}
+/* Hero foto bovenaan na openen */
+.hero-photo {
+  position: relative;
+  width: 100%;
+  height: 420px; /* pas aan naar smaak */
+  margin-bottom: 30px;
+  background: #e8e6df;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Placeholder voor de foto */
+.hero-image {
+  width: 100%;
+  height: 100%;
+  background: #d9d6cf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.6rem;
+  color: #7A1F2A;
+  letter-spacing: 0.05em;
+}
+
+/* Placeholder voor het logo */
+.hero-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(242, 241, 236, 0.8);
+  padding: 20px 30px;
+  border-radius: 50%;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.8rem;
+  color: #7A1F2A;
+  border: 2px solid #7A1F2A;
+}
+.open-invite-image {
+  width: 100%;
+  display: block;
+  margin-bottom: 30px;
+  border-radius: 12px;
+}
+@font-face {
+  font-family: "Blosta Script";
+  src: url("BlostaScript.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Titel Our Love Story */
+.love-title {
+  font-family: "Blosta Script", "Cormorant Garamond", serif;
+  font-size: 2.4rem;
+  color: #7A1F2A;
+  margin-bottom: 20px;
+}
+
+

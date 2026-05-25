@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Uitnodiging G&A</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    @import url('style.css');
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <!-- HERO FOTO MET LOGO -->
+    <section class="hero-photo">
+      <div class="hero-image">AFBEELDING</div>
+      <div class="hero-logo">LOGO</div>
+    </section>
+
+    <!-- OPEN ENVELOP / UITNODIGING FOTO -->
+    <img class="open-invite-image" src="open.jpg" alt="Open uitnodiging" />
+
+    <!-- COUNTDOWN -->
+    <div class="invite-heading">COUNTING DAYS UNTIL WE SAY</div>
+    <div class="invite-yes">“YES”</div>
+
+    <div class="countdown" id="countdown">
+      <div class="count-box">
+        <div class="count-number" id="days">0</div>
+        <div class="count-label">Days</div>
+      </div>
+      <div class="count-box">
+        <div class="count-number" id="hours">0</div>
+        <div class="count-label">Hours</div>
+      </div>
+      <div class="count-box">
+        <div class="count-number" id="minutes">0</div>
+        <div class="count-label">Minutes</div>
+      </div>
+      <div class="count-box">
+        <div class="count-number" id="seconds">0</div>
+        <div class="count-label">Seconds</div>
+      </div>
+    </div>
+
+    <div class="bible-text">
+      Ainsi ils ne sont plus deux, mais ils sont une seule chair.
+      Que l’homme donc ne sépare pas ce que Dieu a joint.
+      <div class="bible-ref">Matthieu 19:6</div>
+    </div>
+
+    <!-- LOVE STORY -->
+    <section class="love-story">
+      <h2 class="love-title">Our Love Story</h2>
+
+      <div class="love-text">
+        Notre histoire a commencé là où beaucoup de belles choses naissent :
+        à l'église. Amis de coeur avant d'être amoureux, notre relation s'est
+        construite dans la simplicité, l'écoute et la complicité, jusqu'à ce
+        que l'amour, voulu et guidé par Dieu, se révèle au coeur de notre amitié.
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    // Countdown tot 8 augustus 2026
+    const targetDate = new Date("2026-08-08T00:00:00");
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = targetDate - now;
+
+      if (diff <= 0) return;
+
+      const seconds = Math.floor(diff / 1000);
+      const days = Math.floor(seconds / (60 * 60 * 24));
+      const hours = Math.floor((seconds % (60 * 60 * 24)) / (60 * 60));
+      const minutes = Math.floor((seconds % (60 * 60)) / 60);
+      const secs = seconds % 60;
+
+      document.getElementById("days").textContent = days;
+      document.getElementById("hours").textContent = hours;
+      document.getElementById("minutes").textContent = minutes;
+      document.getElementById("seconds").textContent = secs;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+
+</body>
+</html>
