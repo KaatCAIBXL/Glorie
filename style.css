@@ -597,3 +597,53 @@
         height: 300px;
       }
     }
+
+/* INVITATION IMAGES SECTION */
+.invitation-images {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.invitation-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.invitation-img-link {
+  position: relative;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+.invitation-img-link:hover .invitation-img {
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.click-here {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(139, 69, 69, 0.85);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.invitation-img-link:hover .click-here {
+  opacity: 1;
+}
