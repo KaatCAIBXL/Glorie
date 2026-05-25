@@ -1,26 +1,59 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
   <title>Mariage - G&A</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
- 
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      background: #F2F1EC;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: "Cormorant Garamond", serif;
+    }
+    
+    .envelope-container {
+      cursor: pointer;
+      max-width: 600px;
+      width: 90%;
+      text-align: center;
+    }
+    
+    .envelope-container img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+    }
+    
+    .envelope-container img:hover {
+      transform: scale(1.02);
+    }
+    
+    .hint {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #666;
+      font-style: italic;
+    }
+  </style>
 </head>
 <body>
-  <div class="letter-screen" id="letter-screen" role="button" tabindex="0" aria-label="Ouvrir l'invitation">
-    <div class="envelope">
-      <div class="envelope-body"></div>
-      <div class="envelope-flap"></div>
-      <div class="envelope-seal">G&amp;A</div>
-      <p class="envelope-label">Gloire &amp; Annabelle</p>
-    </div>
-    <p class="letter-hint">Cliquez sur la lettre pour ouvrir</p>
+  <div class="envelope-container" onclick="window.location.href='invite.html'" role="button" tabindex="0" aria-label="Cliquez pour ouvrir l'invitation">
+    <img src="1.jpg" alt="Enveloppe bordeaux - Cliquez pour ouvrir" />
+    <p class="hint">Cliquez sur l'enveloppe pour ouvrir l'invitation</p>
   </div>
-
-  <div id="invitation">
+</body>
+</html>
     <section class="hero">
       <img src="G&A logo blanc(2).png" alt="Logo" class="logo">
     </section>
