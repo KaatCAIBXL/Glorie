@@ -160,12 +160,22 @@ body {
 .invitation-images {
   width: 100%;
   max-width: 700px;
-  margin: 40px auto;
+  margin: 0 auto; /* geen extra ruimte bovenaan */
+  padding-top: 20px; /* zelfde spacing als HTML-secties */
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 0; /* afbeeldingen sluiten perfect op elkaar aan */
 }
+
+.invitation-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0; /* geen afgeronde hoeken → naadloze overgang */
+  box-shadow: none; /* geen schaduw → één geheel */
+}
+
 
 .invitation-img {
   width: 100%;
