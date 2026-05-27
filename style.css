@@ -250,4 +250,9 @@ img {
   object-fit: cover; /* optional: prevents distortion */
 }
 
+h5{
+  color: #7A1F2A;
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 
