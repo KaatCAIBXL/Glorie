@@ -11,11 +11,11 @@
       padding: 0;
       height: 100%;
       max-width: 100%;
-      overflow-x: hidden; /* voorkomt horizontaal scrollen */
+      overflow-x: hidden;
       background: #F2F1EC;
     }
 
-    /* De envelop vult het volledige scherm */
+    /* DEFAULT (computer & tablet) */
     body {
       display: flex;
       justify-content: center;
@@ -25,18 +25,42 @@
 
     .card {
       cursor: pointer;
-      width: 100%;
-      height: 100vh; /* vult volledige hoogte */
+      max-width: 600px;
+      width: 90%;
     }
 
     .card img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;      /* vult scherm zonder vervormen */
-      object-position: center;
       display: block;
-      border-radius: 0;       /* geen afgeronde hoeken */
-      box-shadow: none;       /* geen schaduw op de envelop */
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      height: auto;
+      object-fit: cover;
+    }
+
+    /* GSM: envelop fullscreen */
+    @media (max-width: 768px) {
+      body {
+        padding: 0;
+        margin: 0;
+        display: block; /* geen centrering */
+        height: 100vh;
+      }
+
+      .card {
+        width: 100%;
+        height: 100vh;
+        max-width: none;
+      }
+
+      .card img {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        box-shadow: none;
+        object-fit: cover;
+        object-position: center;
+      }
     }
   </style>
 </head>
