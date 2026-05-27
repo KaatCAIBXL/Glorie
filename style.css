@@ -1,32 +1,38 @@
-@font-face {
-  font-family: "Blosta Script";
-  src: url("BlostaScript.ttf") format("truetype");
-}
-
-body {
+/* ALGEMEEN */
+html, body {
   margin: 0;
-  background: #F2F1EC;
-  font-family: "Cormorant Garamond", serif;
-  min-height: 100vh;
+  padding: 0;
+  max-width: 100%;
   overflow-x: hidden;
+  height: 100%;
 }
 
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0; /* geen afgeronde hoeken */
+}
+
+/* WRAPPER MET SCHADUW */
 .wrapper {
   width: 100%;
   max-width: 700px;
-  margin: 40px auto;
+  margin: 0 auto;
   padding: 20px;
   background: #F2F1EC;
   box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  box-sizing: border-box;
 }
 
+/* HERO */
 .hero-photo {
-  position: relative;
   width: 100%;
   height: 420px;
-  margin-bottom: 30px;
   background: #e8e6df;
-  border-radius: 0;
+  margin-bottom: 30px;
+  position: relative;
   overflow: hidden;
 }
 
@@ -37,7 +43,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: #7A1F2A;
 }
 
@@ -48,18 +54,16 @@ body {
   transform: translate(-50%, -50%);
   background: rgba(242, 241, 236, 0.8);
   padding: 20px 30px;
-  border-radius: 50%;
-  font-size: 1.8rem;
-  color: #7A1F2A;
   border: 2px solid #7A1F2A;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  color: #7A1F2A;
 }
 
-/* OPEN INVITE IMAGE */
+/* OPEN INVITE */
 .open-invite-image {
   width: 100%;
-  display: block;
   margin-bottom: 30px;
-  border-radius: 0;
 }
 
 /* COUNTDOWN */
@@ -67,37 +71,37 @@ body {
   text-align: center;
   letter-spacing: 0.18em;
   color: #7A1F2A;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
 
 .invite-yes {
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-style: italic;
   color: #7A1F2A;
-  margin-bottom: 25px; /* MEER RUIMTE */
+  margin-bottom: 25px;
 }
 
 .countdown {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 35px; /* MEER RUIMTE */
+  margin-bottom: 35px;
 }
 
 .count-box {
   min-width: 70px;
-  padding: 8px 10px;
+  padding: 10px;
   border: 1px solid #7A1F2A;
   border-radius: 0;
-  text-align: center; /* CENTREREN */
+  text-align: center;
 }
 
 .count-number {
   font-size: 1.3rem;
   color: #7A1F2A;
   display: flex;
-  justify-content: center; /* CENTREREN */
+  justify-content: center;
 }
 
 .count-label {
@@ -106,14 +110,13 @@ body {
   color: #7A1F2A;
 }
 
-/* BIBLE TEXT */
+/* BIJBELTEKST */
 .bible-text {
   text-align: center;
   font-style: italic;
   color: #444;
-  margin-top: 20px;
   margin-bottom: 50px;
-  font-size: 1.05rem; /* ZELFDE GROOTTE ALS LOVE STORY */
+  font-size: 1.05rem; /* zelfde grootte als love story tekst */
 }
 
 .bible-ref {
@@ -128,7 +131,6 @@ body {
 }
 
 .love-title {
-  font-family: "Blosta Script";
   font-size: 2.4rem;
   color: #7A1F2A;
   margin-bottom: 20px;
@@ -154,36 +156,29 @@ body {
   height: 340px;
   background: #e8e6df;
   border: 2px dashed #7A1F2A;
-  border-radius: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
   color: #7A1F2A;
+  font-size: 1.2rem;
+  border-radius: 0;
 }
 
-/* UITNODIGINGSBEELDEN ONDERAAN */
+/* INVITATION IMAGES */
 .invitation-images {
   width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
-  padding-top: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 0; /* NAADLOOS */
+  gap: 0;
 }
 
 .invitation-img {
   width: 100%;
-  height: auto;
-  border-radius: 0;
-  display: block;
   margin: 0;
-  box-shadow: none;
+  border-radius: 0;
 }
 
-/* GROTERE KLIKZONE */
+/* GROTE KLIKZONE */
 .invitation-img-link {
   width: 100%;
   display: block;
@@ -192,7 +187,7 @@ body {
 }
 
 .invitation-img-link img {
-  pointer-events: none;
+  pointer-events: none; /* klik overal */
 }
 
 .click-here {
@@ -200,4 +195,30 @@ body {
   font-size: 1rem;
   color: #7A1F2A;
   font-style: italic;
+}
+
+/* GOOGLE MAPS */
+.maps-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.maps-container iframe {
+  width: 100%;
+  height: 350px;
+  border: 0;
+  display: block;
+}
+.closed-envelope {
+  width: 100%;
+  height: 100vh;          /* vult volledige hoogte van het scherm */
+  object-fit: cover;      /* vult het scherm zonder vervorming */
+  object-position: center;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
 }
