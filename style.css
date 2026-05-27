@@ -102,6 +102,13 @@ img {
   margin-bottom: 35px;
 }
 
+@media (max-width: 480px) {
+  .countdown {
+    padding: 0 12px;
+    box-sizing: border-box;
+  }
+}
+
 .count-box {
   min-width: 70px;
   padding: 10px;
