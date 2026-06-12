@@ -233,6 +233,64 @@ img {
   display: block;
 }
 
+/* HOTELS */
+.hotels-container {
+  padding: 20px 0;
+}
+.hotels-title {
+  text-align: center;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #7A1F2A;
+  margin-bottom: 15px;
+}
+.hotel-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #fff;
+  border: 1px solid #e8e4dc;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+.hotel-info { flex: 1; }
+.hotel-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+.hotel-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
+.hotel-badge {
+  font-size: 11px;
+  background: #F2EEE8;
+  color: #7A1F2A;
+  border-radius: 4px;
+  padding: 2px 8px;
+}
+.hotel-address {
+  margin: 0 0 3px;
+  font-size: 13px;
+  color: #777;
+  font-style: italic;
+}
+.hotel-price {
+  margin: 0;
+  font-size: 13px;
+  color: #7A1F2A;
+  font-weight: 600;
+}
+
+
+
 .QR-code p{
   text-align: center;
   font-style: italic;
