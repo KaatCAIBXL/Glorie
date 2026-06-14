@@ -136,12 +136,26 @@ img {
   font-style: italic;
   color: #444;
   margin-bottom: 50px;
-  font-size: 1.05rem; /* zelfde grootte als love story tekst */
+  font-size: 1.3rem; /* zelfde grootte als love story tekst */
 }
 
 .bible-ref {
   margin-top: 4px;
   color: #7A1F2A;
+}
+
+h5{
+  color: #7A1F2A;
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 15px;
+}
+
+h6{
+  color: #7A1F2A;
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 18px;
 }
 
 /* LOVE STORY */
@@ -308,9 +322,5 @@ img {
   object-fit: cover; /* optional: prevents distortion */
 }
 
-h5{
-  color: #7A1F2A;
-  text-align: center;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
+
 
